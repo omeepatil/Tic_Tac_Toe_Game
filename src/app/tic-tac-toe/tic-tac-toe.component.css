@@ -1,0 +1,75 @@
+/* Ensure the game board is centered and responsive */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Center and space out the status text */
+  .status {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the game board with a grid layout and spacing */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px; /* Spacing between cells */
+  }
+  
+  /* Style each cell with flexbox for centering */
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333; /* Dark border for better visibility */
+    font-size: 48px;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #6a0dad; /* Default violet-purple mix color */
+    color: white; /* Default text color */
+  }
+  
+  /* Hover effect with a lighter shade of violet-purple */
+  .cell.default:hover {
+    background-color: #8a2be2; /* Lighter shade of violet */
+    transform: scale(1.1); /* Slightly enlarge the cell */
+  }
+  
+  /* Style X's color in blue and white */
+  .cell.x {
+    background-color: #fff; /* White background for X */
+    color: blue; /* Blue text for X */
+  }
+  
+  /* Style O's color in red */
+  .cell.o {
+    background-color: #f8d7da; /* Light red background for O */
+    color: red; /* Red text for O */
+  }
+  
+  /* Hover effect for X and O with no change */
+  .cell.x:hover, .cell.o:hover {
+    background-color: inherit; /* No change in background color on hover */
+    transform: scale(1.1); /* Slightly enlarge the cell */
+  }
+  
+  /* Style the button with Bootstrap's primary color and spacing */
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of Bootstrap primary color on hover */
+    color: #fff; /* White text on hover */
+  }
+  

@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <div class="status mb-3">{{ gameStatusMessage }}</div>
+        <div class="board d-grid gap-2">
+          <div *ngFor="let cell of board; let i = index" 
+               [ngClass]="{'cell': true, 'x': cell === 'X', 'o': cell === 'O'}" 
+               (click)="makeMove(i)">
+            {{ cell }}
+          </div>
+        </div><br><br>
+        <button class="btn btn-primary mt-3" (click)="resetGame()">Restart Game</button>
+      </div>
+    </div>
+  </div>
+  
